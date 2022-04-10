@@ -1,7 +1,7 @@
 # web-
 尚硅谷中htmlcssjsReact代码。第二次使用git，记录一下
 
-### $\color{red}{JavaScript}$
+### JavaScript
 
 ##### 遍历相关
 
@@ -400,4 +400,4 @@
     		~('Blue Whale'.indexOf('Bloe'))        // 0, 这是一种错误用法
     ```
 
-  - [MDN文档](
+  - [MDN文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
