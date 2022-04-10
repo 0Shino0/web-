@@ -1,5 +1,5 @@
 # web-
-尚硅谷中htmlcssjsReact代码。第二次使用git，记录一下
+    一下是我对JavaScript的一些总结
 
 ### JavaScript
 
