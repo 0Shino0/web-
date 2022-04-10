@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        function Person(name, age, gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+
+        //修改Person原型的toString
+        Person.prototype.toString = function () {
+            return "Person[name=" + this.name + ",age=" + this.age + ",gender=" + this.gender + "]";
+        };
+
+
+        //创建一个Person实例
+        var per = new Person("孙悟空", 18, "男");
+        var per2 = new Person("猪八戒", 28, "男");
+
+        //当我们直接在页面中打印一个对象时，事件上是输出的对象的 toString()方法的返回值
+        //如果我们希望在输出对象时不输出[object Object]，可以为对象添加一个toString()方法
+        //Person[name=孙悟空,age=18,gender=男]
+        /*per.toString = function(){
+        	return "Person[name="+this.name+",age="+this.age+",gender="+this.gender+"]";
+        };*/
+
+        var result = per.toString();
+        //console.log("result = " + result);
+        //console.log(per.__proto__.__proto__.hasOwnProperty("toString"));
+        console.log(per2);
+        console.log(per);
+
+
+        /* 
+        JavaScript toString() 方法
+            定义和用法
+
+            toString() 方法可把一个 Number 对象转换为一个字符串，并返回结果。
+            语法
+
+            NumberObject.toString(radix)
+
+            参数 	描述
+            radix 	可选。规定表示数字的基数，使 2 ~ 36 之间的整数。若省略该参数，则使用基数 10。但是要注意，如果该参数是 10 以外的其他值，则 ECMAScript 标准允许实现返回任意值。
+            返回值
+
+            数字的字符串表示。例如，当 radix 为 2 时，NumberObject 会被转换为二进制值表示的字符串。
+            抛出
+
+            当调用该方法的对象不是 Number 时抛出 TypeError 异常。
+
+        */
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

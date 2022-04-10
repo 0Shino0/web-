@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            height: 3000px;
+        }
+        
+        .nav{
+            width: 1210px;
+            height: 48px;
+            background-color: #E8E7E3;
+
+            margin: 100px auto;
+
+            position:sticky;
+            top: 10px;
+        }
+
+        /* 
+        粘滞定位
+        */
+
+        .nav li{
+            float: left; 
+
+            /* height: 48px; */
+
+            line-height: 48px;
+
+        }
+
+        .nav a{
+            display: block;
+            text-decoration: none;
+            padding: 0 64px;
+            color: #777777;
+            font-size: 18px;
+        }
+
+        a:hover{
+            background-color:#3F3F3F;
+            color:#E8E7E3;
+        }
+
+        .nav li:last-child a{
+            padding: 0 62px 0 71px;
+        }
+        
+    </style>
+
+    <link rel="stylesheet" href="../reset.css">
+</head>
+<body>
+
+
+    <ul class="nav">
+        <li>
+            <a href="#">HTML/CSS</a>
+        </li>
+
+        <li>
+            <a href="#">Browsr Side</a>
+        </li>
+
+        <li>
+            <a href="#">Server</a>
+        </li>
+
+        <li>
+            <a href="#">Programming</a>
+        </li>
+
+        <li>
+            <a href="#">XML</a>
+        </li>
+
+        <li>
+            <a href="#">Reference</a>
+        </li>
+    </ul>
+</body>
+</html>

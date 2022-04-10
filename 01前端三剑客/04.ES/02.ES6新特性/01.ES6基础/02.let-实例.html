@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .item {
+            width: 100px;
+            height: 50px;
+            border: solid 1px rgb(42, 156, 156);
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="page-header"></h2>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <script>
+        // 获取元素对象
+        let items = document.querySelectorAll('.item');
+
+
+        // // let items = document.querySelectorAll('.item');
+
+        // // 遍历数组
+        // for(let i = 0;i<items.length;i++){
+        //     // 单击 绑定事件
+        //     items[i].onclick = function(){
+        //         // 不能用 items[i]
+        //         this.style.background = 'pink';
+        //     }
+        // }
+
+
+        // ES模拟实现
+        for (var i = 0; i < items.length; i++) {
+            (function (i) {
+                // 单击 绑定事件
+                items[i].onclick = function () {
+                    this.style.background = 'pink';
+                }
+            })(i)
+
+        }
+    </script>
+</body>
+
+</html>

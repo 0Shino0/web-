@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+//    var name = "The Window";
+//    var object = {
+//        name: "My Object",
+//        getNameFunc: function () {
+//
+//            return function () {
+//                return this.name;
+//            };
+//        }
+//    };
+//    console.log(object.getNameFunc()());
+//var name2 = "The Window";
+//var object2 = {
+//    name2: "My Object",
+//    getNameFunc: function () {
+//        var that = this;
+//        return function () {
+//            return that.name2;
+//        };
+//    }
+//};
+//console.log(object2.getNameFunc()());
+function fun(n, o) {
+    n=0,o=und
+    console.log(o)
+    return {
+       // m=1
+        fun: function (m) {
+            return fun(m, n)
+        }
+    }
+}
+
+var a = fun(0)//undefined
+a.fun(1)
+a.fun(2)
+a.fun(3)
+var b = fun(0).fun(1).fun(2).fun(3)
+
+</script>
+</body>
+</html>

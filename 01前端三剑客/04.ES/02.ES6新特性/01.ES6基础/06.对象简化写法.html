@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let name = '捐星';
+        let pos = '摘星星';
+        let change = function () {
+            console.log('改变');
+        }
+
+        // const atguigu = {
+        //     name:name,
+        //     pos:pos,
+        //     change:change
+        // }
+
+        // 与上方同样效果
+        const atguigu = {
+            // ES6简化写法
+            // 1.允许直接在对象中 放入对象
+            // 2.允许直接在对象中 写 函数名（省略function）添加函数
+            name,
+            pos,
+            change,
+            // 2.
+            in(){
+                console.log(1);
+            }
+        }
+
+
+        console.log(atguigu);
+    </script>
+</body>
+
+</html>

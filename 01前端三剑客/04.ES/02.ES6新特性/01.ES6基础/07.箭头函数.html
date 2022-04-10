@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // ES6中允许使用 [箭头] （=>）定义函数
+        // 1.声明格式
+        // let add = (a,b,c) => {
+        //     let result = a + b +c;
+        //     return result;
+        // }
+
+        // // 2.函数调用
+        // console.log(add(1,2,3));
+        // console.log(add.call({},1,2,3));
+        // console.log(add.apply({},[1,2,3]));
+
+        // 箭头函数特点
+        // 1.this 的值是静态的 (等于 外层作用域下this的值)
+        // let getName2 =() =>{
+        //     console.log(this);
+        // }
+        // getName2.call({})
+
+        // 2.不能作为构造函数使用
+        // const Person = () =>{}
+        // let me = new Person();
+
+
+        // 3.不能使用 arguments
+        // function fn(){
+        //     console.log(arguments);
+        //     //arguments是一个伪数组
+        // }
+        // fn(1,2,3,4,5,6);
+
+        // fn = () =>{
+        //     console.log(arguments);
+        // }
+        // fn(1,2,3,4,5,6);
+
+
+        // 4.箭头函数简写
+        //  一 不写小括号，当新参有且只有一个的时候
+        //  二 不写花括号, 当代码体只有一条语句的时候, 并且语句的执行结果为函数返回值的 (如果不写花括号的话, return 也不能写)
+        // let pow = num =>{
+        //     return num * num;
+        // }
+        // console.log(pow);
+
+        // let pow01 = num => num * num;
+        // console.log(pow01);
+
+        let rand = (m, n) => Math.ceil(Math.random() * (n - m + 1)) + m - 1;
+            // 生成一个x-y之间的随机数
+            // Math.round(Math.random()*(y-x)+x)
+            // Math.ceil()
+            // 	- 可以对一个数进行向上取整，小数位只要 有值就自动 进1
+            // Math.floor()
+            // 	- 可以对一个数进行向下取整， 小数部分会 被舍掉
+            // Math.round()
+            // 	- 可以对一个数进行 四舍五入 取整
+
+        
+        console.log(rand(0, 100));
+    </script>
+</body>
+
+</html>

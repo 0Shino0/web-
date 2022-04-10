@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>静态成员</title>
+</head>
+<body>
+    
+    <script>
+        // ##静态成员属于类 而不属于实例对象
+        
+        // ES5中
+        // function Phone(brand){
+        //     // 为实例对象添加属性
+        //     this.brand = brand;
+        // }
+        // // 函数对象添加属性
+        // Phone.name = '手机';//又称之为 静态成员
+        // Phone.change = function(){
+        //     console.log('改变世界');
+        // }
+        // //
+        // let nokia = new Phone('诺基亚');
+        // console.log( nokia);
+
+
+        // ES6zhon
+
+        class Phone{
+            static name = '手机';
+            static change(){
+                console.log('我改变世界');
+            }
+
+        }
+
+        console.log(Phone.name);
+        Phone.change();
+
+
+    </script>
+</body>
+</html>
+

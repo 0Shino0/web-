@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // 面向对象三大特征：封装 继承 多态
+        // 在js（es5）当中 我们可以将构造函数 理解为 类
+        // ES6 当中 出现了一个关键字 class 类  不过他也不是真正的类底层依旧是通过封装构造函数来实现的 其本质就是一个 语法糖
+
+        // 研究继承 核心问题 能够继承父类已有的 属性和方法 减少代码的重复
+        function Dog(name,color,age){
+            this.name = name ;
+            this.color = color;
+            this.age = age;
+        }
+
+        Dog.prototype.run= function(){
+            console.log('我可以跑');
+        }
+
+        Dog.prototype.eat= function(){
+            console.log('我可以吃');
+        }
+
+        function Corky(name,color,age){
+            // this.name = name ;
+            // this.color = color;
+            // this.age = age;
+    // 在调用call()和apply()可以将 一个对象指定为第一个参数
+	// 此时这个对象将会成为函数执行时的 this
+    // 当前作用域内 this 是Corky的实例化对象
+    // 这种 继承方式 叫做借助`  1  专门让子类继承父类的属性
+    // 1.构造函数继承
+            Dog.call(this,name,color,age);  
+        }
+
+        // 2.原型链式继承 让子类的原型 等于 父类的一个实例
+        Corky.prototype = new Dog();
+        // 我们需要手动的将 Corky原型上的构造器属性 重新指向Corky
+        Corky.prototype.constructor = Corky;
+
+        // 3. 混合继承  就是将构造函数继承 与 原型继承一起使用
+        var d1 = new Dog('wangcai','blank',3);
+        var c1 = new Corky('dapi','black',3);
+        d1.run();
+
+        // 用c1调用一个方法 自身没有的是 会沿着__proto__ 去找构造函数prototype
+        // 但是现在 Corky 的prototype 指向 Dom的实例
+        // Dom的实例 也没有这个方法 但是可以顺着实例化对象 __proto__ 找到Dog的prototype
+        c1.run();
+        console.log(d1);
+        console.log(c1);
+
+
+    </script>
+    
+</body>
+</html>

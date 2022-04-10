@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 200px;
+            height: 280px;
+            background-color: #eee;
+            padding: 20px;
+            margin:0 auto;
+        }
+        button{
+            margin: 30px 25px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <p>商品:</p>
+        <p>原价:</p>
+        <p>现价:</p>
+        <p>内容:</p>
+        <p>地址:</p>
+        <p>
+            <button>取消</button>
+            <button>支付</button>
+        </p>
+    </div>
+
+    <script>
+        // 
+        // 逻辑：点击支付，出现确认框
+        document.getElementsByTagName('button')[1].onclick = function(){
+            var res =  window.confirm('你确定要支付吗');
+            if(res){
+                location.href = './index.html';
+            }
+        }
+    </script>
+</body>
+</html>

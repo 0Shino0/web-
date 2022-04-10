@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest参数</title>
+</head>
+<body>
+    <script>
+        //arguments
+        // rest 参数 ...参数名  
+        
+        function main(...args){
+
+            //1. 使用 arguments 获取实参
+            console.log(arguments);
+            // 传递的是一个对象
+
+            //2. rest 参数
+            console.log(args);
+            // 传递的为一个数组
+        }
+        main(1,5,10,20,25);// 1,5,10,20,25  => ...[1,5,10,20,25] => 1,5,10,20,25
+
+        //2. 如果有多个参数 rest参数必须在最后
+        
+        // function fn(a,b,...args){
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(args);
+        // }
+        // fn(1,2,3,4,5,6,7);
+
+        // 3.使用场景  针对不定个数的参数
+    </script>
+</body>
+</html>

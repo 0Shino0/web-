@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>symbol</title>
+</head>
+<body>
+    <script>
+        //ES6 引入了一种新的原始数据类型 Symbol，表示独一无二的值
+        
+        //1. 创建 Symbol
+        let s1 = Symbol();
+        console.log(s1, typeof s1);
+        
+        //2. 创建 Symbol
+        // let s2 = Symbol('品牌');
+        // let s3 = Symbol('品牌');
+        // console.log(s2 === s3);
+
+        //3. 创建 Symbol
+        let s4 = Symbol.for('200826');
+        let s5 = Symbol.for('200826');
+        console.log(s4 === s5);
+
+       // symbol 不能与其他类型数据进行运算
+        // const result = s1 + 123;
+
+    </script>
+</body>
+</html> 

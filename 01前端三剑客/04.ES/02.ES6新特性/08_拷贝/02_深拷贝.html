@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // JSON 实现深拷贝
+        // *stringify 将JS对象转化为JSON 格式的字符串
+        // *parse 将JSON格式的字符串转化为JS对象 
+        // 缺陷 ：无法复制方法
+
+        const school = {
+            name: "尚硅谷",
+            pos: ['北京', '上海', '深圳'],
+            founder: {
+                name: '刚哥'
+            },
+
+            change:function(){
+                console.log('gaisda');
+            }
+        }
+
+        //将对象转化为JSON格式的字符串
+        let str = JSON.stringify(school);
+        let newSchool = JSON.parse(str);
+
+        // 测试
+        newSchool.pos[0] = 'beijing';
+
+        console.log(school);
+        console.log(newSchool);
+        
+        // console.log(str);
+        // console.log(typeof str);
+        //typeof运算符，用来检测一个变量的类型
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if和switch</title>
+</head>
+<body>
+    <script>
+        /*
+			 * prompt()可以弹出一个提示框，该提示框中会带有一个文本框，
+			 * 	用户可以在文本框中输入一段内容，该函数需要一个字符串作为参数，
+			 * 	该字符串将会作为提示框的提示文字
+			 * 
+			 * 用户输入的内容将会作为函数的返回值返回，可以定义一个变量来接收该内容
+             * 
+             * prompt(text,defaultText)
+             * text 	可选。要在对话框中显示的纯文本（而不是 HTML 格式的文本）。
+                defaultText 	可选。默认的输入文本。
+			 */
+
+             var score = prompt("毛爷你喜欢什么jb","请输入1~3直接的数");
+            
+             switch(score){
+                 // score 为字符串类型 所有需要加 ''
+                 case '1':
+                     alert("毛爷nb");
+                     break;
+                case '2':
+                     alert("毛爷nnnb");
+                     break;
+                case '3':
+                     alert("毛爷sb");
+                     break;
+                default:
+                    alert("数据错误，请重新输入");
+             }
+             
+            //  if(score ==1){
+            //      alert("毛爷nb")
+            //  }
+    </script>
+</body>
+</html>

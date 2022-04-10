@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+
+            background-color: #bfa;
+            
+            /* border: 10px red solid; 
+            outline用来设置元素的轮廓线,用法和
+            border-模一样轮廓和边框不同的点,就是轮廓不会影响到可见框的大小
+    
+            outline: 10px rgba(255, 0, 0, 0.568) solid;
+            */
+
+            /* 
+            box-shadow用来设置元素的阴影效果,阴影不会影响页面布局
+            第一个值水平偏移量设置阴影的水平位置正值向右移动负值
+            第二个值垂直偏移量设置阴影的水平位置正值向下移动负值
+            第三个值阴影的模糊半径
+            第四个值阴影的颜色 */
+            box-shadow: 20px 20px 9px rgba(0, 0, 0, 0.5);
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: #F8750C;
+
+
+            /*border-radius:用来设置圆角圆角设置的圆的半径大小*/ 
+            
+            /*border-top-left-radius: 
+            border-top-right-radius  
+            border-bottom-left-radius: 
+            /* border-bottom-right-radius: 
+            border-top-left-radius:50px 100px; 
+            border-radius可以分别指定四个角的圆角
+            
+            四个值 左上 右上 右下 左下
+            三个值 左上 右上 左下 右下
+            两个个值 左上/右下 右上/左下/* 
+            border-radius: 20px / 40px; */ 
+            /*将元妻设置为一个圆形 */ 
+           
+            
+            /* border-radius:50px 20px 10px 5px; */
+            border-radius: 50%;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.589);
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="box1"></div>
+    <span>hello</span>
+
+    <div class="box2"></div>
+</body>
+</html>

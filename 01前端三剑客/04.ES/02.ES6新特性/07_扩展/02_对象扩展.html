@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象扩展</title>
+</head>
+<body>
+    <script>
+        //1. 判断两个值是否完全相等  ===  Object.is
+        // let n = 100;
+        // let n2 = 200;
+        // console.log(Object.is(n, n2));
+        // console.log(Object.is(NaN, NaN));// NaN === NaN
+
+        //2. Object.assign 对象的合并
+        // const A = {
+        //     name: 'ATGUIGU'
+        // }
+
+        // const B = {
+        //     pos: ["北京",'上海','深圳'],
+        //     name: '尚硅谷'
+        // }
+
+        // const C = {
+        //     name: 'at-guigu'
+        // }
+            // Object.assign返回 目标对象
+            // 当对象中数据重名时 越在后方的参数 优先级越高 （覆盖前方）
+            // 
+        // const res = Object.assign(A, B, C);
+        // console.log(res === A);
+        // console.log(A);
+
+        //3. 直接修改 __proto__ 设置原型
+        // const A = {
+        //     name: '父级'
+        // }
+
+        // const B = {
+        //     test: '测试'
+        // }
+
+        // B.__proto__ = A;
+
+        // console.log(B);
+       
+    </script>
+</body>
+</html>

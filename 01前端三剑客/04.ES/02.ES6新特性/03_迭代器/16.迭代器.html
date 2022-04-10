@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>迭代器</title>
+</head>
+<body>
+    <script>
+        const arr = ['刘德华','黎明','郭富城','张学友'];
+
+        //for...of 遍历
+        for(let v of arr) {
+            console.log(v);
+            // console.log(arr);
+        }
+
+        //得到 iterator     
+        const iterator = arr[Symbol.iterator]();
+        // 迭代器 原理 创建一个指针对象 通过 next方法 每一次去获取对象
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+
+        // {value: '', done: true}
+
+        // for(let i in arr){
+        //     console.log(i);
+        // }
+        
+    </script>
+</body>
+</html>

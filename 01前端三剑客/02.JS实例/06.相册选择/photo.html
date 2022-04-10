@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .big{
+            width: 500px;
+            
+        }
+
+        .small>img{
+            width: 123px;
+            /* height: 100px; */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./image/img02.png" alt="" class="big">
+    </div>
+    <div class="small">
+        <img src="./image/img02.png" alt="">
+        <img src="./image/img03.png" alt="">
+        <img src="./image/img04.png" alt="">
+        <img src="./image/img05.png" alt="">
+    </div>
+
+    <script>
+        // 逻辑：本质上，把小图的src 赋值给 大图的src
+        // 图片元素.src = ''
+
+        let imgs = document.getElementsByTagName('img');
+
+        for(let i =1;i<imgs.length;i++){
+            imgs[i].onmouseover = function(){
+                imgs[0].src = this.src;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        function Computer(name,brand,price,color) {
+            this.name = name;
+            this.brand = brand;
+            this.price = price;
+            this.color = color;
+        }
+        Computer.prototype.playGame = function () {
+          console.log('玩游戏')
+        };
+    
+    //    constructor  是构造函数 显式圆形对象上的一个属性  指向这个原型对象 对应的构造函数
+        var t1 = new Computer('macBook','apple','18000','银色');
+        console.log(t1)
+
+        // prototype 被称为 显式原型
+        // __proto__ 为 隐式原型
+        // 每一个构造函数的创建都会同步的创建 其原型对象。
+        // 构造函数的 prototype 指向 其原型对象
+        // 原型对象的 constructor 又指向 其构造函数
+        // 然后 我们通过 new 构造函数 可以得到 其实例对象
+        // 实例对象 的隐式原型(__proto__) 会指向 其构造函数 的显式原型(prototype)
+        // 即 实例化对象的隐式原型 是其构造函数的显式原型
+
+        // 所以的 对象 都是Object new 出来的
+        // 所有的 函数 都是Function new 出来的
+//         - **Object new 了 所有的 对象** 
+// -  **Function new 了 所有的 函数**
+        // Function new了 Object
+        // Function new了 Function
+
+        
+    </script>
+</body>
+</html>

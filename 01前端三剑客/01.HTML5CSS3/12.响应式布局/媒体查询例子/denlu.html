@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html{
+            font-size: 20px;
+        }
+
+        @media only screen and (min-width:375px){
+            html{
+                font-size: 23.4px !important;
+            }
+        }
+
+        @media only screen and (min-width:401px){
+            html{
+                font-size: 25.875px !important;
+            }
+        }
+
+        @media only screen and (min-width:428px){
+            html{
+                font-size: 26.75px !important;
+            }
+        }
+
+        @media only screen and (min-width:481px){
+            html{
+                font-size: 30px !important;
+            }
+        }
+
+        @media only screen and (min-width:569px){
+            html{
+                font-size: 35px !important;
+            }
+        }
+
+        @media only screen and (min-width:641px){
+            html{
+                font-size: 40px !important;
+            }
+        }
+
+        *{
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: #efefef;
+            color: #fff;
+            font-size: 12px;
+            background-image: url(./img/hg_snn_bg.png);
+            background-size: 100%;
+        }
+
+        a{
+            text-decoration: none;
+            color: gray;
+        }
+
+        input,select,textarea{
+            outline: 0;
+            border: none;
+            background-color: #f8f8f8;
+        }
+
+        input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{
+            color: #ccc;
+        }
+
+        input:-moz-placeholder,textarea::-moz-placeholder{
+            color: #ccc;
+        }
+
+        input::-moz-placeholder,textarea::-moz-placeholder{
+            color: #ccc;
+        }
+
+
+        input:-ms-input-placeholder,textarea:-ms-input-placeholder{
+            color: #ccc;
+        }
+
+        .content{
+            padding: .7rem .7rem;
+            height: 340px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: .7rem;
+        }
+
+        .content-box{
+            padding: 0 1.5rem;
+            margin-top: 11.2rem;
+        }
+
+        /* 开启绝对定位 */
+        .input-group{
+            position: relative;
+            padding-left: 45px;
+            height: 46px;
+            line-height: 46px;
+            background-color: #f8f8f8;
+            color: #218b85;
+            border-radius: 20px;
+            margin-bottom: 5px;
+        }
+
+        .icon{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 10px;
+            top: 13px;
+            background-size: cover;
+        }
+
+        .icon-form-user{
+            background-image: url(./img/hg_snn_xm.png);
+        }
+
+        .icon-form-mobile{
+            background-image: url(./img/hg_snn_sj.png);
+        }
+
+        .icon-form-address{
+            background-image: url(./img/hg_snn_dz.png);
+        }
+
+        .icon-from-nx{
+            background-image: url(./img/hg_snn_nx.png);
+        }
+
+        .btn{
+            display: inline-block;
+            padding: 6px 12px;
+            width: 235px;
+            font-size: 15px;
+            font-weight: bold;
+            background-color: #e70012;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        <div class="content">
+            <div style="text-align: center; font-size: 30px; font-weight: bold; margin-bottom: 20px;">
+                <div style="color: #e70012;">报名信息</div>
+            </div>
+            
+            <div class="input-group">
+                <span class="icon icon-form-user"></span>
+                <input type="text" id="A01" name="A01" placeholder="请输入联系人的姓名">
+            </div>
+            <div class="input-group">
+                <span class="icon icon-form-mobile "></span>
+                <input type="text" id="A02 " name="A02" placeholder="请输入联系电话" maxlength="11">
+            </div>
+            <div class="input-group">
+                <span class="icon icon-form-address"></span>
+                <input type="text" id="A03" name="A03" placeholder="请输入配送地址">
+            </div>
+            <div class="input-group">
+                <span class="icon icon-form-nx"></span>
+                <input type="text" id="A04" name="A04" placeholder="是否有奶箱">
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <div class="btn" onclick="ajax_set();">确认</div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

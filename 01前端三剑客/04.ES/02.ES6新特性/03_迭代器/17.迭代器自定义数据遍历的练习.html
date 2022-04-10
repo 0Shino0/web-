@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义遍历数据</title>
+</head>
+<body>
+    <script>
+        const team = {
+            name: '终极一班',
+            members: [
+                'xiaoming',
+                'xiaoning',
+                'xiaotian',
+                'knight'
+            ],
+            //添加 Symbol.iterator
+            [Symbol.iterator]: function(){
+                let index = 0;
+                return {
+                    next: () => {
+                        //声明对象
+                        const result = {value: this.members[index], done: false};
+                        //判断下标 修改 『done』 属性的值
+                        if(index >= this.members.length){
+                            result.done = true;
+                        }
+                        //下标自增
+                        index++;
+                        //返回结果
+                        return result;
+                    }
+                }
+            }
+        }
+        
+        //需求
+        for(let v of team){
+            console.log(v);
+        }
+
+        // for(let v of team.members){}
+        // 不规范  通常对象 是被保护起来的，他们只能通过他所暴露出来的接口来 交互
+        // 但js里 并没有对 对象 进行保护
+
+        // team.members.forEach();
+
+
+    </script>
+</body>
+
+</html>

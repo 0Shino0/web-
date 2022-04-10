@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(./images/rainbow_cup.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.title{
+    text-align: center;
+    padding: 50ox 0 20px;
+}
+
+.title h1{
+    margin: 0;
+    padding: 0;
+    color: #262626;
+    text-transform: uppercase;
+    /* uppercase
+    这个关键字强制所有字符被转换为大写。 */
+    font-size: 60px;
+    line-height: 200px;
+    height: 200px;
+}
+
+.container{
+    width: 50%;
+    min-width: 600px;
+    height: 400px;
+    background: #fff;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .5);
+}
+
+.container .left{
+    float: left;
+    width: 50%;
+    height: 400px;
+    background: url(./images/rainbow_cup.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+    
+}
+
+.container .right{
+    float: right;
+    width: 50%;
+    height: 400px;
+}
+
+.formBox{
+    width: 100%;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    height: 400px;
+    background: #fff;
+
+}
+
+.formBox p{
+    margin: 0;
+    padding: 0;
+    font-size: bold;
+    color: #a6af13;
+
+}
+
+.formBox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.formBox input[type="text"],
+.formBox input[type="Password"]{
+    border: none;
+    border-bottom: 2px solid #a6af13;
+    outline: none;
+    height: 40px;
+}
+
+.formBox input[type="text"]:focus,
+.formBox input[type="Password"]:focus{
+    border-bottom: 2px solid #a6af13;
+     
+}
+.formBox input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    background: #262626;
+    cursor: pointer;
+}
+
+.formBox input[type="submit"]:hover{
+    background: #a6af13;
+
+}
+
+.formBox a{
+    color: #262626;
+    font-size: 12px;
+
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合</title>
+
+
+    <style>
+
+        .red{
+            color: red;
+        }
+
+        /*
+        交集选择器作用:
+            选中同时复合多个条件的元素
+            语法:选择器1选择器2选择器3选择器n{}
+            注意点:交集选择器中如果有元素选择器,必须使用元素选择器开头
+        */
+        div.red{
+            font-size: 33px;
+        }
+
+        p.green{
+            font-size: 52px;
+        }
+
+        /*
+    选择器分组(并来选择器)
+    作用,同时选择多个选择器对应的元素
+    语法:选择器1,选择器2,选择器3,选择器n{}
+
+        #b,.p1,p2,div.red{}
+        */
+
+        p1,p2{
+            color: yellow;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <h1 class="black">小说</h1>
+    <div class="red">1.《我是幕后大佬》</div>
+    <p class="green">2.《女友找我来寻仇》</p>
+    <div class="">3.《妹子太多，只好飞升》</div>
+    <p1 >4.《我真不是邪神走狗》</p>
+    <p2 >5.《我，抗吧带师》</p>
+</body>
+</html>

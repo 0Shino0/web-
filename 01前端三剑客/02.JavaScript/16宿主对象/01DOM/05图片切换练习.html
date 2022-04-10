@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        #outer {
+            width: 500px;
+            margin: 50px auto;
+            padding: 10px;
+            background-color: greenyellow;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        window.onload = function() {
+            var prev = document.getElementById('prev');
+            var next = document.getElementById('next');
+
+            var img = document.getElementsByTagName("img")[0];
+
+            var ArrayImg = ["img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg", "img/5.jpg"]
+            var ArrayIndex = 0;
+
+            var info = document.getElementById('info');
+            info.innerHTML = "一共" + ArrayImg.length + "张图片，当前第" + (ArrayIndex + 1) + "张图片";
+
+
+
+            prev.onclick = function() {
+                ArrayIndex--;
+                if (ArrayIndex < 0)
+                    ArrayIndex = ArrayImg.length - 1;
+
+
+                img.src = ArrayImg[ArrayIndex];
+
+                info.innerHTML = "一共" + ArrayImg.length + "张图片，当前第" + (ArrayIndex + 1) + "张图片";
+            }
+
+            next.onclick = function() {
+                ArrayIndex++;
+                if (ArrayIndex > ArrayImg.length - 1)
+                    ArrayIndex = 0;
+
+
+                img.src = ArrayImg[ArrayIndex];
+                info.innerHTML = "一共" + ArrayImg.length + "张图片，当前第" + (ArrayIndex + 1) + "张图片";
+
+            }
+
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="outer">
+        <p id="info"></p>
+
+        <img src="img/1.jpg" alt="">
+
+        <button id="prev">上一张</button>
+        <button id="next">下一张</button>
+    </div>
+
+
+</body>
+
+</html>

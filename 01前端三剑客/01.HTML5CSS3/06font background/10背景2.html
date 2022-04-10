@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box1{
+            width: 500px;
+            height: 500px;
+            overflow: auto;
+            background-color: #bfa;
+            background-image: url(../重要的东西/lsp\ \(29\).jpg);
+            background-repeat: no-repeat;
+            /* background-position:  -500px 300px; */
+
+            /* 
+                设置背景的范围
+              background-clip
+                        可选值：
+                            border-box 默认值， 背景会出现在边框的下边
+                            padding-box 背景不会出现在边框，只出现在内容区和内边框
+                            content-box 背景只会出现在内容区
+            */
+            /* background-clip: border-box;
+            background-clip: content-box; */
+
+
+            /* 
+            background-size 设置背景图片大小
+                    第一个值表示宽度
+                    第二个值表示高度
+                            如果只写一个，则第二个值默认为auto
+                    
+                            cover 图片比例不变，将元素铺满
+                            contait 比例不变，将图片在元素中完整显示
+            */
+
+            background-size: contain;
+
+            /* 
+            background-color
+            background-image
+            background-repeat
+            ackground-position
+            background-size
+            background-origin
+            background-clip 
+            background-attachment
+            
+            backgound背景相关的简写属性,所有背景相关的样式都可以通过该样式来设置
+                并且该样式没有顺序要求，也没有哪个属性是必要的
+            
+            注意
+                background-size 必须写在background-position 的后面，并且使用/隔开
+                    background-position/background-size
+
+                background-origin  background-clip orgin要在clip 的前面
+            */
+
+            border: 10px red double;
+
+        }
+
+        .box2{
+            width: 300px;
+            height: 1000px;
+            /* background-color: orange; */
+            background-image: url(../重要的东西/lsp\ \(26\).jpg);
+            background-size: 100px;
+            background-repeat:no-repeat;
+
+            /* 
+            background-attachment
+                    -背景图片是否跟随元素移动
+                    -可选值
+                            scroll 默认值 背景图片会随元素移动
+                            fixed 背景图片固定页面中 不会随元素移动
+            */
+            background-attachment: fixed;
+        }
+
+        .box3{
+            width: 500px;
+            height: 500px;
+            background: #bfa url(../重要的东西/lsp\ \(36\).jpg) center/contain no-repeat ;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="box3"></div>
+    
+    <!-- <div class="box1">
+        <div class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, soluta magnam ratione dignissimos libero iusto odio porro quod vero quo eaque ab ex ea tempora corporis tenetur laborum, assumenda eum.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga qui velit necessitatibus modi vero veritatis! Quae aperiam repellendus facilis impedit! Incidunt sapiente officiis omnis recusandae voluptate autem ab necessitatibus nihil.
+            ;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate nihil, possimus officiis ratione maiores, tempore incidunt exercitationem eaque ipsam, quo nisi asperiores suscipit! Provident consequuntur laboriosam facere repellat officiis quidem.
+        </div>
+    </div> -->
+
+
+</body>
+</html>

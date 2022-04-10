@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul,li{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul{
+            width: 560px;
+            border: 3px solid #eee;
+            margin: 0 auto;
+        }
+
+        li{
+            width: 80px;
+            height: 40px;
+            background-color: #ccc;
+            border: 1px solid #abc;
+            float: left;
+            margin: 5px;
+            /* cursor CSS 属性设置光标的类型（如果有），
+            在鼠标指针悬停在元素上时显示相应样式。 */
+            cursor: pointer;
+        }
+
+        div{
+            width: 280px;
+            height: 90px;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 90px;
+            color: #333;
+        }
+
+        /* 设置 点击 样式 */
+        .click{
+            font-size: 10px;
+            text-align: center;
+            line-height: 40px;
+            font-family: '仿宋';
+            font-weight: bold;
+            color: #333;
+            background: orange;
+            border: 1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+		<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+		<p style="clear:both;"></p>
+		<div>屏幕中央</div>
+	</ul>
+
+    <script>
+        // 逻辑：没有click类的时候，进行添加，同时对文本进行赋值；反之，清空click类，同时 文本值为空
+        let lis =document.getElementsByTagName('li');
+        for(let i =0;i<lis.length;i++){
+            lis[i].onclick = function(){
+                // getAttribute() 方法通过名称获取属性的值。
+                let res = this.getAttribute('class');
+                if(!res){
+                // setAttribute() 把指定属性设置或修改为指定的值
+                    this.setAttribute('class','click');
+                    this.innerText = '座位已选';
+                }else{
+                    this.setAttribute('class','');
+                    this.innerText = '';
+                }
+                
+            }
+        }
+    </script>
+</body>
+</html>

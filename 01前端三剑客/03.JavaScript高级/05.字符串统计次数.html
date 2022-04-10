@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+  var str = 'aabbcccdddd';
+//  字符串不可变性
+//  str[1] = 'a';
+//  console.log(str[1])
+//    关系数组    通常我们使用数字索引 来访问或修改  数组中的元素
+//   但是其实我们也可以 将字符串 当做索引来使用     关系数组是没有长度属性的  因为只有以数字索引存入的值才会被长度属性检测到
+    var arr = [];
+//    arr[a:1]
+  for (var i = 0; i < str.length; i++) {
+      arr[str[1]] = arr[str[1]] + 1 || 1;
+//    arr['a'] = 1 + 1 || 1;
+  }
+  console.log(arr)
+</script>
+</body>
+</html>

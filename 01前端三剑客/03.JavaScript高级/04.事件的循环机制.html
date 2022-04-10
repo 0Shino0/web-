@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //  setTimeout 的执行是同步 里面的回调函数的执行是异步
+        // 事件的绑定是 异步 但是触发是 同步
+        box.onclick = function () {
+
+        }
+        var a = 0;
+        for (var i = 0; i < 50000; i++) {
+            for (var j = 0; j < 50000; j++) {
+                a++;
+            }
+        }
+        console.log(a);
+        setTimeout(function () {
+            console.log('今天中午吃点啥')
+        }, 3000);
+    </script>
+
+</body>
+
+</html>

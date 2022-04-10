@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浅拷贝</title>
+</head>
+<body>
+    <script>
+        //拷贝 就是 复制   对象和数组
+        //1. 直接复制
+        // let arr = [1,2,3,4];
+        // const newArr = arr;
+        // //测试
+        // newArr[0] = 521;
+        // console.log(arr);
+        // console.log(newArr);
+        //2. 数组  
+            let arr = [{name:'atguigu'},2,3,4];
+            // 1> concat
+            // let newArr = [].concat(arr);
+            // newArr[0].name = '尚硅谷';
+            // console.log(arr)
+            // console.log(newArr)
+
+            // 2> slice 
+            // let newArr = arr.slice(0);
+            // newArr[0].name = '尚硅谷';
+            // console.log(arr)
+            // console.log(newArr)
+
+            // 3> 扩展运算符
+            // let newArr = [...arr];
+            // newArr[0].name = '尚硅谷';
+            // console.log(arr)
+            // console.log(newArr)
+            
+        //3. 对象
+            //使用 assign 方法创建对象 (assign 对象的合并)
+            const school = {
+                name: "尚硅谷",
+                pos: ['北京','上海','深圳']
+            }
+
+            const newSchool = Object.assign({}, school);
+
+            // newSchool.name = 'atguigu';
+            newSchool.pos[0] = 'beijing';
+
+            console.log(school);
+            console.log(newSchool);
+
+
+    </script>
+</body>
+</html>

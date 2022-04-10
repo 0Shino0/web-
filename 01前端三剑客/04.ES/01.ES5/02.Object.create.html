@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // 新建一个对象
+        var car = {
+            name:'汽车',
+            run: function(){
+                console.log('我可以跑');
+            }
+        }
+
+        // 调用 create 方法创建新对象   继承
+        var Passat = Object.create(car,{
+            brand: {
+                // 设置的是 属性值
+                value: '帕沙特',
+                // 属性值 是否可以修改
+                writable: true,
+                //  属性值 是否可以删除
+                configurable: true,
+                // 属性是否可以 枚举(遍历)
+                enumerable: false
+
+            },
+            // 价格属性
+            price:{
+                // get 是一个对象方法 无需收到调用  (获取price是调用)
+                get: function(){
+                    console.log('Price被捕获了');
+                    // return 280000;
+                },
+                set: function(value){
+                    // this 指的是新建对象
+                    this.jiage = value;
+                    // console.log(this ===Passat); //true
+                    
+                    console.log("我被设置了？");
+                    console.log('你是谁');
+                }
+            }
+        });
+
+        // console.log(Passat);
+        // Passat.run();
+        // Passat.brand = '大众';
+
+        // delete Passat.brand
+
+        // for(var i in Passat){
+        //     console.log(i);
+        // }
+
+        //获取 价格属性 
+        // console.log(Passat.price);
+        // 设置 价格属性
+        Passat.price = 20000;
+        // console.log(Passat);
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        const school = {
+            name: "尚硅谷",
+            pos: ['北京', '上海', '深圳'],
+            founder: {
+                name: '刚哥'
+            },
+
+            change:function(){
+                console.log('gaisda');
+            }
+        }
+
+        // 先 创建数据容器
+        const newSchool ={};
+        // 再添加
+        // name
+        newSchool.name = school.name;
+
+        // pos
+        newSchool.pos = [];
+        newSchool.pos[0] = school.pos[0];
+        newSchool.pos[1] = school.pos[1];
+        newSchool.pos[2] = school.pos[2];
+        
+        // founder
+        newSchool.founder = [];
+        newSchool.founder.name = school.founder.name;
+
+        // 方法
+        newSchool.change = school.change.bind(newSchool);
+
+        // 测试
+        newSchool.pos[0] = 'beijing';
+
+        console.log(school);
+        console.log(newSchool);
+
+        // 封装代码思路相同
+
+    </script>
+</body>
+</html>

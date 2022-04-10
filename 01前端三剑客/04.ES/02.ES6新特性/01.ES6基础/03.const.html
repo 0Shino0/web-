@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const 定义常量</title>
+</head>
+<body>
+    <script>
+        //const 用来声明一个常量(值不变) let a
+        //0. 格式
+        // const a = 100;  
+        //1. 声明的时候一定要赋初始值
+        const PLAYER = 'UZI';
+
+        //2. 常量的名称一般为 『大写』  潜规则
+        const RESOLVED = 'resolved';
+
+        //3. 不能修改常量的值
+        // PLAYER = '小狗';
+
+        //4. 不允许重复声明
+        // const PLAYER = 'abc';
+
+        //5. 块儿级作用域
+        // {
+        //     const A = 100;
+        // }
+        // console.log(A);
+        
+        //6. 关于数组和对象的元素的修改
+        // const TEAM = ['UZI','MLXG','LETME'];
+        // TEAM.push('XIYE');
+        // console.log(TEAM);
+        // const BIN = {
+        //     name: 'BIN'
+        // }
+        // BIN.name = '阿斌';
+        // console.log(BIN);
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol 创建对象属性</title>
+</head>
+<body>
+    <script>
+        //向对象中添加方法 up down 
+        let method = {
+            up: Symbol(),
+            down: Symbol()
+        }
+        let str = 'run';
+
+        let game = {
+            name:'俄罗斯方块' ,
+            up: function(){
+
+            },
+            //内部添加方法
+            [str]: function(){
+                
+            },
+            [method.up]: function(){
+                console.log('UP UP UP');
+            }
+        };
+
+        // console.log(game);
+        game[method.up]();
+
+        
+
+        //添加 up 方法
+        // game[method.up] = function(){
+        //     console.log('向上移动');
+        // }
+        // game[method.up]();
+
+    </script>
+</body>
+</html>

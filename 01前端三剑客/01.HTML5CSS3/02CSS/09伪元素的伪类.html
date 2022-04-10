@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        p{
+            font-size: 20px;
+        }
+
+        /*
+        伪元素,表示页面中一些特殊的并不真实的存在的元素(特殊的位置)
+            伪元素使用::开头
+            
+            ::first-letter表示第一个字母
+            
+            ::first-line表示第一行
+            
+            ::selection表示选中的内容
+
+            开发重点使用
+            ::before元素的开始
+            ::after元素的最后
+            before和after必须结合content属性来使用
+
+        */
+
+        p::first-letter{
+            font-size: 52px;
+        }
+
+        p::first-line{
+            background-color: gold;
+        }
+
+        div::selection{
+            color: white;
+            /* background-image: -moz-linear-gradient(#e66465, #9198e5); */
+            background-color: blue;
+        }
+
+        div::before{
+            content: '666wdbb';
+            color: blueviolet;
+        }
+
+        div::after{
+            content: 'ilu';
+            color: brown;
+        }
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <q>555</q>
+
+    <div>123456789</div>
+    <p>about intelligence
+        　　　　when we talk about intelligence, we do not mean the ability to get good scores on certain kinds of tests or even the ability to do well in school. by intelligence we mean a way of living and behaving, especially in a new or upsetting situation. if we want to test intelligence,we need to find out how a person acts instead of how much he knows what to do.
+        　　 for instance, when in a new situation, an intelligent person thinks about the situation, not about himself or what might happen to him. he tries to find out all he can, and then he acts immediately and tries to do something about it. he probably isn't sure how it will all work out, but at least he tries. and if he cannot make things work out right, he doesn't feel ashamed that he failed, he just tries to learn from his mistakes. an intelligent person, even if he is very young, has a special outlook on life and a special feeling about life.
+        　　　if you look at children, you'll see great differences between what we call "bright" children and "not bright" children. they are actually two different kinds of people, not just the same kind with different amounts of intelligence. for example, the bright child really wants to find out about life -- he tried to get in touch with everything around him. but the unintelligent child keeps more to himself and his own dreamworld; he seems to have a wall between him and life in general.</p>
+        <p>关于智力
+            　　当我们谈论智力的时候，不是指在某些考试中取得优异成绩的能力，甚至不是指在学校中达到学业优秀的能力。我们所说的智力指的是一种生活行为的方式，特别是处于
+            新环境或逆境中的时候。如果我们想要对智力加以测试，我们需要发现一个人如何行事而不是他对做什么了解多少。
+            　　比如，当处于一种新环境中时，聪明人会对环境进行思考，而不是想他自己或者想可能会在他身上发生什么事情。他努力发现所能了解的任何情况，然后立即行动，并试图对此采取一定措施。他也许不能肯定是否能成功，但至少他努力过。而且如果他不能使事情成功，他也不会为失败感到羞耻，他只会努力从错误中吸取教训。一个聪明人，即使很年轻，也对生活有着不同寻常的见解和感悟。
+            　　看看孩子们，你会发现在我们所谓的“聪明孩子”和“不聪明孩子”之间存在着重大差异。他们实际上是两种人，而不仅仅是智力水平不尽相同的一种人。比如，聪明的孩子确实想要了解生活——他试图和周围的一切进行接触。但是不够聪明的孩子更多的是局限在自己和自己的梦幻世界中，在他自己和大众生活之间似乎存在着一堵隔墙。</p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+//    var a = 0;
+//    for (var i = 0; i < 50000; i++) {
+//        for (var j = 0; j < 50000; j++) {
+//            a++;
+//        }
+//    }
+
+//    以一个js文件为单位  启动模拟多线程
+    var myWorker = new Worker('js/myWorker.js');
+//    向另外一个线程 发送消息
+    myWorker.postMessage(50000);
+//    在主线程上 也要绑定接收消息的事件   当子线程处理完成之后我们就可以拿到结果了
+    myWorker.onmessage = function (event) {
+      console.log(event.data);
+    }
+
+    console.log('今天晚上吃点啥');
+
+</script>
+</body>
+</html>

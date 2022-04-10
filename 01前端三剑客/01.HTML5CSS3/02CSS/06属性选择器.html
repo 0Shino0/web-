@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        /*
+        
+        [属性名]选择含有指定属性的元素
+        
+        属性名=属性值]选择含有 指定属性和属性值的元素
+        
+        [属性名^=属性值]选择属性值以指定值 开头的元素
+        
+        [属性名$=属性值]选择属性值以指定值 结尾的元素
+        
+        [属性名*=属性值]选择属性值中 含有某值的元素的元素
+        */
+
+        p[title^=a]{
+            color: blanchedalmond;
+        }
+
+        p[title$=c]{
+            color: red;
+        }
+
+        p[title*=w]{
+            color: blue;
+        }
+
+        /* p[title=cccwd]{
+            color: blue;
+        } */
+        
+    </style>
+</head>
+<body>
+    
+
+
+
+    <h1 >燃起来吧，燃起来吧，燃nm？？？</h1>
+    <p title="abcd">今日的风甚是喧嚣</p>
+    <p title="aaab">为王的诞生献上火炮</p>
+    <p title="kkkc" >为我活下去吧</p>
+    <p title="ddddw">我什么也做不到</p>
+    <p title="cccwd">我想起来了</p>
+
+
+
+</body>
+</html>

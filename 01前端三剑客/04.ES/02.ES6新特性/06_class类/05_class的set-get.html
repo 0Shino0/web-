@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get set</title>
+</head>
+<body>
+    
+    <script>
+        class Phone{
+
+            get price(){
+                console.log('666');
+                // return
+            }
+
+            set price(v){
+                //参数 v 是用来接收设置的数值
+                this.jiage = v;
+            }
+
+            static get size(){
+                return '5.5inch';
+            }
+
+            static set size(value){
+                this.chiucn = value;
+                // return 
+            }
+
+        }
+
+        let chuizi = new Phone();
+        // 属性的获取
+        // console.log(chuizi.price);
+        // 属性的设置
+        // chuizi.price = 1599;
+        // 属性的获取
+        // let res = Phone.size;
+        // console.log(res);
+        // 静态属性的设置
+        Phone.size = '6inch';
+        console.dir(Phone);
+
+    </script>
+</body>
+</html>

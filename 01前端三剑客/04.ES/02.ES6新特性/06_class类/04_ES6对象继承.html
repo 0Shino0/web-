@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        class Phone{
+        // 构造方法
+        //必须死 constructor
+        constructor(brand,price){
+            this.brand = brand;
+            this.price = price;
+        }
+        // 方法
+        call(someone){
+            console.log(`我可以给${someone}打电话`);
+        }
+        sendMessage(someone){
+            console.log(`我可以给${someone}打电话`);
+        }
+       }
+
+    //  子类继承
+       class SmartPhone extends Phone{
+        //    子类对象添加构造方法   初始化
+            constructor(brand, price, storage, pixel){
+                // 调用父类构造方法 属性初始化
+                super(brand,price);//super 超级
+                this.storage = storage;
+                this.pixel = pixel;
+            }
+
+            // 添加方法
+            playGame(){
+                console.log('1111');
+            }
+
+            takePhone(){
+                console.log(1111000);
+            }
+
+       }
+
+       const onePlus = new SmartPhone( '华为','7000','12','123');
+       console.log(onePlus);
+
+       onePlus.call('孙俪');
+    </script>
+</body>
+</html>

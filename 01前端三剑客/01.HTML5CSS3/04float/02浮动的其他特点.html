@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color:#bfa;
+
+            /* 浮动元素不会盖住文字,文字会自动环绕在浮动元素的周围,
+                    所以我们可以利用浮动来设置文字环绕图片的效果 */
+            float: left;
+        }
+
+        .box2{
+            background-color: yellow;
+
+            /* 元素设置浮动以后,将会从文档流中脱离,从文档流中脱离后,元素的一些特点也会
+            
+            脱离文档流的特点:
+                块元素:
+                1、块元素不在独占页面的一行
+                2、脱离文档流以后,块元素的宽度和高度默认都被内容撑开
+                
+                行内元素：
+                行内元素A离文档流以后会变成块元素,特点和块元素一样
+                脱离文档流以后,不需要再区分块和行内 */
+            float: left;
+
+        }
+
+        .box3{
+            background-color: orange;
+
+            float: left;
+        }
+
+        .s1{
+            width: 200px;
+            height: 200px;
+            float: left;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box1"> -->
+        
+    <!-- </div>
+    <p>
+        【尚硅谷】Web前端零基础入门HTML5+CSS3基础教程丨初学者从入门到精通
+        收藏于： 9-27
+        全网最快！6分钟教你从配置服务器到搭建网站！06:51
+        
+        播放：11.5万
+        
+        收藏：8324
+        
+        UP主：EchoXiaoze
+        
+        投稿：2020-6-25
+        全网最快！6分钟教你从配置服务器到搭建网站！
+        收藏于： 9-27
+        【尚硅谷】JavaScript基础&实战丨JS入门到精通全套完整版39:39:21
+        
+        播放：267.4万
+        
+        收藏：7.8万
+        
+        UP主：尚硅谷
+        
+        投稿：2018-4-3
+        【尚硅谷】JavaScript基础&实战丨JS入门到精通全套完整版
+        收藏于： 9-27
+        【白菜教程】免费域名注册+个人服务器搭建 （不要钱！让所有人都可以看到你的网站）09:27
+        
+        播放：13.4万
+        
+        收藏：5070
+        
+        UP主：白菜叶儿二代
+        
+        投稿：2018-1-30
+        【白菜教程】免费域名注册+个人服务器搭建 （不要钱！让所有人都可以看到你的网站）
+        收藏于： 9-25
+        
+
+    </p>       -->
+
+    <div class="box2">hello</div>
+
+    <div class="box3">heeeeee</div>
+
+    <span class="s1"></span>
+
+</body>
+</html>

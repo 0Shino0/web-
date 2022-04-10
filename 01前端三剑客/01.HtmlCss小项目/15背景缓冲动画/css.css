@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #ff4f4f;
+    width: 100%;
+    height: 100%;
+}
+
+.bubbles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bubbles li{
+    position: absolute;
+    list-style: none;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, .2);
+    animation: animate 25s linear infinite;
+}
+
+.bubbles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0;
+    /* animation-delay CSS属性定义动画于何时开始，
+    即从动画应用在元素上到动画开始的这段时间的长度。 */
+}
+
+.bubbles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+}
+
+.bubbles li:nth-child(3){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+}
+
+.bubbles li:nth-child(4){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.bubbles li:nth-child(5){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 18s;
+}
+
+
+

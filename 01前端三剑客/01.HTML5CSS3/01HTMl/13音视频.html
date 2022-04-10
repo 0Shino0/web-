@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音视频</title>
+</head>
+<body>
+    
+    <!--
+    audio标签用来向页面中引入一个外部的音频文件的音视频文件引入时,
+    默认情况下不允许用户自己控制播放停止属性:
+    controls    是否允许用户控制播放autoplay音频文件是否自动播放如果设置了
+    
+    autoplay    则音乐在打开页面时会自动播放但是目前来讲大部分浏览器都不会自动对音乐进行播放
+    
+    loop    音乐是否循环播放
+
+    -->
+
+    <audio src="../音频/Arealy仁辰,Saiakoup - 凉.mp3" controls></audio>
+
+    <br>
+    <br>
+    <!-- 这种写法   能识别音频用音频不能识别则显示文字
+        并且可以嵌套多个source，但优先显示第一个
+    -->
+    <audio controls>
+        抱歉你的浏览器不兼容，请升级您的浏览器。
+        <source src="../音频/Arealy仁辰,Saiakoup - 凉.mp3">
+    </audio>
+
+    <!-- video 用法类比audio -->
+    <br><br>
+    <video controls>
+
+        <source src="../txz/Medea Lily FGO.mp4">
+       
+    </video>
+
+
+    <!--       -->
+    <iframe src="//player.bilibili.com/player.html?aid=77217003&bvid=BV1XJ411X7Ud&cid=132017557&page=26" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
+</body>
+</html>

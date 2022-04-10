@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.w,
+.top-bar,
+.banner,
+.menu,
+.course-list {
+  width: 17.325rem;
+  margin: 0 auto;
+}
+html {
+  font-size: 5.33333333vw;
+  background-color: #eff0f4;
+}
+.top-bar {
+  display: flex;
+  height: 4.375rem;
+  line-height: 4.375rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar a {
+  color: #24253d;
+  font-size: 1.25rem;
+}
+.top-bar a i {
+  color: #999;
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+}
+.banner img {
+  width: 100%;
+}
+.menu {
+  height: 8.225rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.menu a {
+  width: 8.175rem;
+  height: 2.6rem;
+  line-height: 2.6rem;
+  color: white;
+  border-radius: 0.25rem;
+}
+.menu a i {
+  margin: 0 0.5rem 0 0.95rem;
+}
+.course {
+  background-color: #f97053;
+}
+.star {
+  background-color: #cd6efe;
+}
+.sub {
+  background-color: #f97053;
+}
+.download {
+  background-color: #1bc4fb;
+}
+.course-list {
+  height: 9.95rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  margin-bottom: 1.15rem;
+}
+.course-list .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.course-list .title h2 {
+  font-size: 0.825rem;
+  color: #24253d;
+  border-left: 2px solid #3a84ff;
+  padding: 4px;
+}
+.course-list .title a {
+  font-size: 0.7rem;
+  color: #656565;
+}
+.item-list {
+  width: 18rem;
+  display: flex;
+  overflow: auto;
+}
+.item {
+  flex: none;
+  /*
+    border-box 告诉浏览器：你想要设置的边框和内边距的值是包含在width内的。
+    border-box不包含margin
+    */
+  box-sizing: border-box;
+  width: 8rem;
+  height: 8.1rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  flex-flow: column;
+  justify-content: space-evenly;
+  margin-right: 0.6rem;
+}
+.item img {
+  width: 100%;
+}
+.item .course-title {
+  font-size: 0.8rem;
+  color: #24253d;
+}
+.item .avatar {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+.item .user-info {
+  display: flex;
+  align-items: center;
+}
+.item .nickname {
+  margin-left: 6px;
+  font-size: 0.6rem;
+}
+/*# sourceMappingURL=./style.css.map */

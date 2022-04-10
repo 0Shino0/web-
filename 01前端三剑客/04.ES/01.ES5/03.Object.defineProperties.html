@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object.defineProperties</title>
+</head>
+
+<body>
+    <script>
+        var sanlun = {
+            name: '三轮车',
+        };
+
+        // sanlun.brand = '金蛙';
+        Object.defineProperties(sanlun, {
+            brand: {
+                value: '金蛙',
+            },
+            price: {
+                set: function(){
+
+                },
+                get: function(){
+                    return 123;
+                }
+            }
+        });
+
+        console.log(sanlun.price);
+
+
+
+    </script>
+</body>
+
+</html>

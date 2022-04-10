@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+//    var name = "The Window";
+//    var object = {
+//        name: "My Object",
+//        getNameFunc: function () {
+//
+//            return function () {
+//                return this.name;
+//            };
+//        }
+//    };
+//    console.log(object.getNameFunc()());
+//var name2 = "The Window";
+//var object2 = {
+//    name2: "My Object",
+//    getNameFunc: function () {
+//        var that = this;
+//        return function () {
+//            return that.name2;
+//        };
+//    }
+//};
+//console.log(object2.getNameFunc()());
+//    1.函数存在嵌套关系
+//    2.内部函数必须引用外部函数的局部变量
+//    3.外部函数必须调用
+function fun(n, o) {
+//    n = 0   o = und
+//    n = 1   o = 0
+    console.log(o)
+    return {
+//        m = 1;  n = 0;
+        fun: function (m) {
+            return fun(m, n)
+        }
+    }
+}
+var b = fun(0).fun(1).fun(2).fun(3)
+
+//   fun第一次执行环境     n = 0  o = und
+//   fun第二次执行环境     n = 1  o = 0
+//   fun第三次执行环境     n = 2  o = 1
+//   fun第四次执行环境     n = 3  o = 2
+
+
+//    存在几个闭包机制   取决于外部函数调用几次
+//  a  现在是一个对象  对象上有一个fun方法       a.fun(1)  执行之后返回的对象 没有被接收
+//var obj1 = fun(0);// und     这是外部函数的第一次 执行  和我obj1对象当中的fun方法 形成了闭包  第一次的执行环境
+//var obj2 = obj1.fun(1);// 0
+//var obj3 = obj1.fun(2);
+//var obj4 = obj1.fun(3);
+
+
+
+</script>
+</body>
+</html>

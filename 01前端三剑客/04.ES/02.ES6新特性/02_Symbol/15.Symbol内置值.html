@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol内置属性</title>
+</head>
+<body>
+    <script>
+        // Symbol.replace
+        let obj = {
+            [Symbol.replace]: function(){
+                console.log('我被replace方法调用了');
+            }
+        }
+        //声明字符串
+        let str = 'i love you';
+        //调用 replace 方法
+        let result = str.replace(obj, 'xxx');
+    </script>
+</body>
+</html>
