@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>6_axios取消请求 2.html</title>
+    <script type="text/javascript" src="./js/axios.min.js"></script>
+</head>
+
+<body>
+    <button id="btn">点我获取所有人</button><br /><br />
+    <button id="btn2">取消请求</button><br /><br />
+    <!-- 
+				axios请求拦截器
+					1.是什么？
+							在真正发请求前执行的一个回调函数
+					2.作用：
+							对所有的请求做统一的处理：追加请求头、追加参数、界面loading提示等等
+				
+				axios响应拦截器
+					1.是什么？
+							得到响应之后执行的一组回调函数
+					2.作用：
+							若请求成功，对成功的数据进行处理
+							若请求失败，对失败进行统一的操作
+		-->
+
+    <script type="text/javascript">
+        const btn = document.getElementById('btn')
+        const btn2 = document.getElementById('btn2')
+        const {CancelToken,isCancel} = axios //CancelToken能为一次请求 “打标识”
+        let cancel
+
+        btn.onclick = async() => {
+            if(cancel) cancel()  //判断 上一次 的cancel是否有值，若有值则取消上一次的请求
+            axios({
+                url:'http://localhost:5000/test1?delay=3000',
+                cancelToken:new CancelToken((c)=>{ // c是一个函数，调用c就可以关闭本次请求
+                    cancel = c
+                    // c()
+                })
+            }).then(
+                response => {
+                    console.log('成功了', response.data);
+                },
+                error => {
+                    if(isCancel(error)){
+                        //如果进入判断，证明：是用户取消了请求
+                        console.log('用户取消了请求，原因是:',error.message);
+                    }else{
+                        console.log('失败了', error);
+                    }
+                }
+            )
+        }
+
+        btn2.onclick = ()=>{
+            cancel()
+        }
+    </script>
+</body>
+
+</html>

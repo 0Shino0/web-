@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>niudao</title>
+    <style>
+        #content{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>小试牛刀ajax</h3>
+    <button type="" id="btn">点我发送请求(原生js-ajax-get)</button>
+    <div id="content"></div>
+
+
+    <script type="text/javascript">
+        // 获取按钮
+        const btn = document.getElementById('btn');
+        // 给按钮绑定监听
+        btn.onclick = () =>{
+            // 发送 ajax请求
+            //1.创建Xhr实例对象
+            const xhr = new XMLHttpRequest();
+            // console.log(xhr.readyState); //0
+
+            // on 当xxx时候
+            // ready    准备
+            // state    状态
+            // change   状态
+            // xhr 内部有5中状态，值分别为0,1,2,3，4,5
+            // xhr 实例对象， 在实例出来的那一刻状态就是 0 
+            xhr.onreadystatechange = () =>{
+                //  函数体
+                if (xhr.readyState == 4) {
+                    console.log(xhr.response);
+                    content.innerHTML = `<h3>${xhr.response}</h3>`
+                }
+                
+            }
+            // 2.指定发送请求的: method、url
+            xhr.open('GET','http:///127.0.0.1:8080/test_get');
+            // 3.发送请求
+            xhr.send();
+
+        }
+        
+    </script>
+</body>
+</html>

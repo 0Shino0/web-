@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>当前网页不能用服务器打开，因为要制造跨域问题</h3>
+    <button id="btn">点我获取数据</button>
+
+
+    <script type="text/javascript">
+        
+        // function demo(a){
+        //     console.log(a);
+        // }
+        const btn = document.getElementById('btn');
+        btn.onclick =() =>{
+            // 1.创建script节点
+            const scriptNode = document.createElement('script')
+            // 2.给节点指定src属性（请求地址）
+            scriptNode.src = 'http://localhost:8080/test_jsonp?callback=peiqi';
+            // 3.将节点放入界面
+            document.body.appendChild(scriptNode)
+
+            window.peiqi = (a) =>{
+                console.log(a);
+            }
+            //5.移除已经使用过的script节点
+            document.body.removeChild(scriptNode)
+        }
+
+        //总结：Jsonp解决跨域，本质上是避开了 xhr 不受同源策略的限制 利用
+        //      script 标签发起请求，拿到数据
+
+    </script>
+    
+</body>
+
+</html>

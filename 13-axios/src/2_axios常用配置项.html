@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>2_axios常用配置项</title>
+    <script src="./js/axios.min.js"></script>
+</head>
+
+<body>
+
+    <button id="btn1" type="">点我获取</button>
+    <button id="btn2" type="">点我获取测试数据</button>
+
+
+
+    <script type="text/javascript">
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+
+        //给axios.配置默认属性
+        axios.defaults.timeout = 2000
+        axios.defaults.headers = {
+            school: 'atguigu'
+        }
+        axios.defaults.baseURL = 'http://localhost:5000'
+
+        btn1.onclick = () => {
+            //函数体
+            axios({
+                url: '/test1',
+                method: 'GET',
+                params: {
+                    delay: 3000
+                }, //配置query参数
+                //   data:{c:3,d:3}, //配置请求体参数（json） 
+                //   data:'e=5&f=6', //配置请求体参数(urlencoded编码)
+                timeout: 2000, //配置超时时间
+                //   headers:{demo:123}
+                // responseType: 'json'
+            }).then(
+                response => {
+                    console.log('成功了', response.data);
+                },
+                error => {
+                    console.log('失败了', error);
+                }
+            )
+        }
+
+        btn2.onclick = () => {
+            axios({
+                url: '/test1',
+                method: 'GET',
+                // params: {
+                //     delay: 3000
+                // }, //配置query参数
+                // timeout: 2000, //配置超时时间
+                //   headers:{demo:123}
+
+            }).then(
+                response => {
+                    console.log('成功了', response.data);
+                },
+                error => {
+                    console.log('失败了', error);
+                }
+            )
+        }
+    </script>
+</body>
+
+</html>

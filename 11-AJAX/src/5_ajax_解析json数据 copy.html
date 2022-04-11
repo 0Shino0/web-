@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5_ajax_解析json数据</title>
+    <style>
+        #content {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>5_ajax_解析json数据</h3>
+    <button type="" id="btn">点我发送请求(原生js-ajax-get)</button>
+    <div id="content"></div>
+
+
+    <script type="text/javascript">
+        const btn = document.getElementById('btn');
+        const content = document.getElementById('content');
+
+        btn.onclick =() => {
+            // 实例xhr
+            const  xhr = new XMLHttpRequest()
+
+            // 绑定监听
+            xhr.onreadystatechange = () => {
+                if(xhr.readyState ===4){
+                    if (xhr.status >= 200 && xhr.status <=300) {
+                        // console.log(xhr.response);
+                        const {name,age,sex} = JSON.parse(xhr.response)
+                        content.innerHTML = (`
+                        <ul>
+                            <li>姓名：${name}</li>    
+                            <li>年龄：${age}</li>    
+                            <li>性别：${sex}</li>    
+                        </ul>`)
+                    }
+                }
+            }
+
+            // 配置请求
+            xhr.open('GET','/get_person')
+
+            // responseType用于指定返回数据的格式
+            xhr.responseType = 'json'
+
+            //发送请求
+            xhr.send()
+        }
+
+
+        
+    </script>
+</body>
+
+</html>

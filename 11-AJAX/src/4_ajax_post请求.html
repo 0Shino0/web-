@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 4_ajax_post请求.html</title>
+    <style>
+        #content {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3> 4_ajax_post请求.html</h3>
+    <button type="" id="btn">点我发送请求(原生js-ajax-get)</button>
+    <div id="content"></div>
+
+
+    <script type="text/javascript">
+        // 获取按钮
+        const btn = document.getElementById('btn');
+        // 给按钮绑定监听
+        btn.onclick = () => {
+            // 发送 ajax请求
+            //1.创建Xhr实例对象
+            const xhr = new XMLHttpRequest();
+            // 绑定监听
+            xhr.onreadystatechange = () => {
+                //  函数体
+                if (xhr.readyState == 4) {
+                    if (xhr.status >= 200 && xhr.status <= 300) {
+                        console.log(xhr.response);
+                        content.innerHTML = `<h3>${xhr.response}</h3>`
+                    }
+                }
+
+            }
+            
+            // 2.指定发送请求的: method、url、参数
+            /*
+                1.形如：key=value&key=value 就是query参数是surlencoded编码
+                2.形如：/xx/xxx/老刘/18 就是params参数
+            */
+            // xhr.open('GET', 'http:///127.0.0.1:8080/test_get?name=老刘&age=18'); //携带query参数
+            xhr.open('POST', 'http:///127.0.0.1:8080/test_post'); //携带
+            
+            //追加响应头用于标识携带参数的编码形式---urlencoded
+            // xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded')
+
+            //追加响应头用于标识携带参数的编码形式---json
+            xhr.setRequestHeader('Content-type','application/json')
+
+            // 3.发送请求
+            const person = {name:'老刘',age:18}
+
+            // xhr.send('name=老刘&age=18'); //携带urlencoded编码形式的请求体参数
+            //send中的参数 为请求体参数
+            //send中 参数的 编码格式为 urlencoded
+
+            xhr.send(JSON.stringify(person)) //携带json编码形式的请求参数
+
+        }
+    </script>
+</body>
+
+</html>

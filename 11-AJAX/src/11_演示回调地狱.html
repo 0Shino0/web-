@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>10_jquery封装的ajax</title>
+
+	<style>
+		#content {
+			width: 300px;
+			height: 100px;
+			border: 1px solid black;
+			margin-top: 10px;
+		}
+	</style>
+
+	<script type="text/javascript" src="./js/jquery.js"></script>
+</head>
+
+<body>
+	<h3>该页面是测试：10_ajax_避免多次重复请求</h3>
+	<button id="btn1">点我发送请求(原生jQuery-ajax-get)</button>
+	<button id="btn2">点我发送请求(原生jQuery-ajax-post)</button>
+	<div id="content"></div>
+
+	<script>
+		const btn1 = $('#btn1')
+		const btn2 = $('#btn2')
+		const content = $('#content')
+
+		// console.log(btn1);
+		console.log(btn1.click(() => {}));
+
+		btn1.click(() => {
+			// 使用jQuery发送ajax-get（精简版）
+			$.get('http://127.0.0.1:8080/test_jquery_get', {
+				school: 'atguigu'
+			}, (data) => {
+				console.log(data);
+				$.get('http://127.0.0.1:8080/test_jquery_get', {
+					school: 'atguigu'
+				}, (data) => {
+					console.log(data);
+					$.get('http://127.0.0.1:8080/test_jquery_get', {
+						school: 'atguigu'
+					}, (data) => {
+						console.log(data);
+					}, 'json')
+				}, 'json')
+			}, 'json')
+		})
+	</script>
+</body>
+
+</html>
