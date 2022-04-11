@@ -1,0 +1,13 @@
+{
+  "name": "abc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server":"node app.js",
+    "build": "webpack app.js --config=./config.prod.js --env=adfadsf"
+  },
+  "author": "",
+  "license": "ISC"
+}

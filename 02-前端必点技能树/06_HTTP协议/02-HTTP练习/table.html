@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>d</title>
+
+    <style>
+    
+        table,td{
+            border-collapse: collapse;
+        }
+
+        td{
+            padding: 10px 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <table border="1">
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <script>
+        
+        // 获取所有的tr元素
+        const trs = document.querySelectorAll('tr');
+        //遍历
+        for(let i = 0;i<trs.length;i++){
+            // 判断
+            if(i % 2 ===0){
+                trs[i].style.background = '#156'
+            }else{
+                trs[i].style.background = '#baf'
+            }
+        }
+    </script>
+</body>
+</html>
