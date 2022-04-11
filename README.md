@@ -399,5 +399,35 @@
     		'Blue Whale'.indexOf('Bloe') !== -1    // false
     		~('Blue Whale'.indexOf('Bloe'))        // 0, 这是一种错误用法
     ```
+### this指向
+
+##### 原生JS
+
+- 根据函数的调用方式的不同，this会指向不同的对象
+
+  ```
+  1、普通函数调用   直接()                     this代表    window
+  2、够着函数的调用 new +()                    this代表    实例化对象
+  3、方法          a.b()                       this代表    调用的方法对象
+  4、回调函数      自己不用系统调用                    this代表    事件的回调代表事件源
+  5、call apply    让一个对象借用另外一个对象的方法        this代表    自己给定的对象
+  6、箭头函数                                  this代表    外层执行上下文的this
+  ```
+
+  在事件中，this 表示**接收事件的元素**
+
+##### ES6
+
+- ES6中类自动开启了严格模式,禁止全局调用时this指向window,因此
+
+##### React（待完善）
+
+- render中this -> 组件实例App对象；
+- render中this.handler() -> 组件实例App对象 ;
+- render中window.handler() -> window对象；
+- onClick ={this.handler} -> undefined
+
+
+
 
   - [MDN文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
